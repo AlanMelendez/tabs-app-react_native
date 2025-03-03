@@ -23,6 +23,13 @@ const StackLayout = () => {
           title: 'Productos',
         }}
       />
+      <Stack.Screen
+      name="products/[id]"
+      options={{
+        title: 'Product Details', // Default title
+      }}
+    />
+
 
       <Stack.Screen
         name="profile/index"

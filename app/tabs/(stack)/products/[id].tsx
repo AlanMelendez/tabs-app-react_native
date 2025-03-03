@@ -1,5 +1,5 @@
 import { products } from '@/store/products.store';
-import { Redirect, useLocalSearchParams, useNavigation } from 'expo-router';
+import { Redirect, useLocalSearchParams, useNavigation, Link } from 'expo-router';
 import { useEffect } from 'react';
 import { View, Text } from 'react-native';
 const ProductScreen = () => {
@@ -10,7 +10,7 @@ const ProductScreen = () => {
   const product = products.find((p) => p.id == id);
 
   if (!product) {
-    return <Redirect href="/" />;
+    return <Redirect href={{ pathname: '/tabs/products' }} />;
   }
   useEffect(() => {
     if (id) {
