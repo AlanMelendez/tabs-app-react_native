@@ -1,6 +1,17 @@
-import { Stack } from 'expo-router';
+import { FontAwesome } from '@expo/vector-icons';
+import { DrawerActions } from '@react-navigation/native';
+import { Stack, useNavigation } from 'expo-router';
 import React from 'react';
+import { Text } from 'react-native';
 const StackLayout = () => {
+
+  const navigation = useNavigation();
+
+  const onHeaderLeftPress = () => {
+    navigation.dispatch(DrawerActions.toggleDrawer());
+  };
+
+
   return (
     <Stack
       screenOptions={{
@@ -9,6 +20,7 @@ const StackLayout = () => {
         contentStyle: {
           backgroundColor: 'white',
         },
+        headerLeft: ({tintColor, canGoBack}) => <FontAwesome name="bars" className='mr-5' size={24} color={tintColor} onPress={onHeaderLeftPress} />,
       }}
     >
       <Stack.Screen

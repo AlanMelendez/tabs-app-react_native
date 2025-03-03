@@ -9,7 +9,6 @@ const DrawerLayout = () => {
     <Drawer
       drawerContent={CustomDrawer}
       screenOptions={{
-        headerShown: false,
         overlayColor: 'rgba(0, 0, 0, 0.5)',
         drawerActiveTintColor: 'red',
         headerShadowVisible: false,
@@ -40,6 +39,7 @@ const DrawerLayout = () => {
         <Drawer.Screen 
           name="(tabs)"
           options={{ 
+            headerShown: false,
             title: 'Tabs + Stack', 
             drawerLabel: 'Tabs + Stack',
             drawerIcon: () => (<FontAwesome size={28} name="home" color={'green'}/>)
