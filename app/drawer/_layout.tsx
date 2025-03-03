@@ -9,7 +9,7 @@ const DrawerLayout = () => {
     <Drawer
       drawerContent={CustomDrawer}
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
         overlayColor: 'rgba(0, 0, 0, 0.5)',
         drawerActiveTintColor: 'red',
         headerShadowVisible: false,
