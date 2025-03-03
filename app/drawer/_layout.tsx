@@ -9,6 +9,7 @@ const DrawerLayout = () => {
     <Drawer
       drawerContent={CustomDrawer}
       screenOptions={{
+        headerShown: true,
         overlayColor: 'rgba(0, 0, 0, 0.5)',
         drawerActiveTintColor: 'red',
         headerShadowVisible: false,
@@ -32,6 +33,16 @@ const DrawerLayout = () => {
             title: 'Schedule', 
             drawerLabel: 'Schedulesxd',
             drawerIcon: () => (<FontAwesome size={28} name="calendar" color={'indigo'}/>)
+          }}
+        />
+
+        {/* SHOW TABS */}
+        <Drawer.Screen 
+          name="tabs"
+          options={{ 
+            title: 'Tabs + Stack', 
+            drawerLabel: 'Tabs + Stack',
+            drawerIcon: () => (<FontAwesome size={28} name="home" color={'green'}/>)
           }}
         />
     </Drawer>
