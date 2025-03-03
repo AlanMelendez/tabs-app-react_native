@@ -21,6 +21,13 @@ const TabsLayout = () => {
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="heart" color={color} />,
         }}
       />
+       <Tabs.Screen
+        name="(stack)"
+        options={{
+          title: 'Stack',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="user-plus" color={color} />,
+        }}
+      />
     </Tabs>
   )
 }
