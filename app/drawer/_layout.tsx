@@ -2,18 +2,19 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { Drawer } from 'expo-router/drawer';
 import { FontAwesome } from '@expo/vector-icons';
+import CustomDrawer from '@/components/shared/CustomDrawer';
 
 const DrawerLayout = () => {
   return (
     <Drawer
-
-     screenOptions={{
-      overlayColor: 'rgba(0, 0, 0, 0.7)',
-      drawerActiveTintColor: 'red',
-      headerShadowVisible: false,
-      sceneContainerStyle: {
-        backgroundColor: 'white',
-      }
+      drawerContent={CustomDrawer}
+      screenOptions={{
+        overlayColor: 'rgba(0, 0, 0, 0.5)',
+        drawerActiveTintColor: 'red',
+        headerShadowVisible: false,
+        sceneContainerStyle: {
+          backgroundColor: 'white',
+        }
      }}
     >
         <Drawer.Screen
